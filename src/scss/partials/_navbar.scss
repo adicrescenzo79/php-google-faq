@@ -1,0 +1,44 @@
+header{
+  @include ptb(1em, 0em);
+  border-bottom: 1px solid $primary_color;
+  nav{
+    .container-fluid{
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.6em;
+      .left{
+        align-items: flex-end;
+        img{
+          margin-right: 5px;
+        }
+      }
+      .right{
+        align-items: center;
+        img{
+          height: 1em;
+        }
+        i{
+          padding: 5px;
+          background-color: #7496FF;
+          border-radius: 50%;
+          color: #000;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+  .menu{
+    font-size: 1.2em;
+    font-weight: bold;
+    ul{
+      li{
+        margin-right: 30px;
+        @include ptb(0, 1em);
+        &.Domande{
+          color: #3367D6;
+          border-bottom: 3px solid #3367D6;
+        }
+      }
+    }
+  }
+}
