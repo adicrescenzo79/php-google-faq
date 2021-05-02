@@ -1,6 +1,29 @@
 main{
-  max-width: 980px;
+  @include ptb(11.5em, 4em);
   h2{
-    color: red;
+    margin-top: 60px;
+    font-size: 1.8em;
+    text-align: justify;
+  }
+  p{
+    margin-top: 20px;
+    text-align: justify;
+  }
+  ol{
+    margin-top: 20px;
+    span{
+      margin-left: 1em;
+    }
+
+    li{
+      margin-top: 10px;
+      margin-left: 1em;
+      span{
+        margin-left: 1em;
+      }
+    }
+    ol{
+      list-style-type: lower-latin;
+    }
   }
 }

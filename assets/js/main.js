@@ -29,7 +29,7 @@ Vue.config.devtools = true;
 var app = new Vue({
   el: '#root',
   data: {
-    ciaos: [{
+    menuLinks: [{
       nome: 'Introduzione',
       link: '#'
     }, {
@@ -43,6 +43,19 @@ var app = new Vue({
       link: '#'
     }, {
       nome: 'Domande frequenti',
+      link: '#'
+    }],
+    footerLinks: [{
+      nome: 'Google',
+      link: '#'
+    }, {
+      nome: 'Tutto su Google',
+      link: '#'
+    }, {
+      nome: 'Privacy',
+      link: '#'
+    }, {
+      nome: 'Termini',
       link: '#'
     }]
   }

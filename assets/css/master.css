@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +6,7 @@
 }
 
 .container {
-  width: 85%;
+  width: 79%;
   max-width: 1300px;
   margin: 0 auto;
   padding-left: 15px;
@@ -485,6 +486,10 @@ header {
   padding-top: 1em;
   padding-bottom: 0em;
   border-bottom: 1px solid #5f6368;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
 }
 header nav .container-fluid {
   justify-content: space-between;
@@ -525,8 +530,63 @@ header .menu ul li.Domande {
 }
 
 main {
-  max-width: 980px;
+  padding-top: 11.5em;
+  padding-bottom: 4em;
 }
 main h2 {
-  color: red;
+  margin-top: 60px;
+  font-size: 1.8em;
+  text-align: justify;
+}
+main p {
+  margin-top: 20px;
+  text-align: justify;
+}
+main ol {
+  margin-top: 20px;
+}
+main ol span {
+  margin-left: 1em;
+}
+main ol li {
+  margin-top: 10px;
+  margin-left: 1em;
+}
+main ol li span {
+  margin-left: 1em;
+}
+main ol ol {
+  list-style-type: lower-latin;
+}
+
+footer {
+  background-color: #F5F5F5;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+footer .container {
+  justify-content: space-between;
+  align-items: center;
+}
+footer .container ul {
+  font-size: 0.8em;
+}
+footer .container ul li {
+  margin-right: 7.5px;
+}
+footer .container ul li.dot:after {
+  content: "·";
+  margin-left: 7.5px;
+}
+footer .container .right {
+  align-items: center;
+}
+footer .container .right img {
+  align-self: flex-end;
+  margin-right: 5px;
+  position: relative;
+  top: 7px;
+}
+footer .container .right select {
+  width: 175px;
 }

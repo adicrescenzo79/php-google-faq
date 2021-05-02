@@ -1,0 +1,30 @@
+footer{
+  background-color: #F5F5F5;
+  @include py(1em);
+  .container{
+    justify-content: space-between;
+    align-items: center;
+    ul{
+      font-size: 0.8em;
+      li{
+        margin-right: 7.5px;
+        &.dot:after{
+          content: '\00B7';
+          margin-left: 7.5px;
+        }
+      }
+    }
+    .right{
+      align-items: center;
+      img{
+        align-self: flex-end;
+        margin-right: 5px;
+        position: relative;
+        top: 7px;
+      }
+      select{
+        width: 175px;
+      }
+    }
+  }
+}

@@ -11,9 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- FONTAWSOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="http://localhost/php-google-faq/assets/css/master.css">
-    <!-- <link rel="stylesheet" href=".assets/css/master.css"> -->
-    <title></title>
+    <!-- <link rel="stylesheet" href="http://localhost/php-google-faq/assets/css/master.css"> -->
+    <link rel="stylesheet" href="./assets/css/master.css">
+    <link rel="shortcut icon" type="image/jpg/png" href="//ssl.gstatic.com/policies/favicon.ico">
+    <title>Domande frequenti - Privacy e termini - Google</title>
   </head>
   <body>
     <div id="root">
@@ -34,7 +35,7 @@
           <div class="menu mt-15">
             <div class="container-fluid">
               <ul class="flex">
-                <li v-for="ciao in ciaos" :class="ciao.nome"><a target="_blank" :href="ciao.link">{{ ciao.nome }}</a></li>
+                <li v-for="menuLink in menuLinks" :class="menuLink.nome"><a target="_blank" :href="menuLink.link">{{ menuLink.nome }}</a></li>
               </ul>
             </div>
           </div>
@@ -43,8 +44,9 @@
       </header>
 
       <main>
+        <div class="container">
 
-        <?php
+          <?php
           $faqs = [
             'Come state implementando la recente decisione della Corte di giustizia dell\'Unione europea (CGUE) relativa al diritto all\'oblio?' => [
               'La recente decisione della Corte di giustizia dell\'Unione europea ha profonde conseguenze per i motori di ricerca in Europa. La Corte ha stabilito che alcuni utenti hanno il diritto di chiedere ai motori di ricerca come Google di rimuovere risultati relativi a chiavi di ricerca che includono il proprio nome. Per poter essere rimossi, i risultati visualizzati devono essere inadeguati, irrilevanti o non più rilevanti, o eccessivi.',
@@ -93,11 +95,24 @@
                   <?php foreach ($answer as $key1 => $list1) {
                     if (!(is_array($list1))) {?>
                       <li>
-                      <?= $list1 ?>
+                        <span>
+
+                          <?= $list1 ?>
+                        </span>
                       </li>
                     <?php } else { ?>
                       <li>
-                      <?= $key1 ?>
+                        <ol>
+                          <span>
+
+                            <?= $key1 ?>
+                          </span>
+                          <?php
+                          foreach ($list1 as $key2 => $list2) {?>
+                            <li><span><?= $list2 ?></span></li>
+                          <?php }
+                          ?>
+                        </ol>
                       </li>
 
                     <?php }?>
@@ -105,13 +120,27 @@
                   <?php }?>
                 </ol>
               <?php }
-            }?>
-          <?php }
-        ?>
+            }
+          }
+          ?>
+        </div>
+
 
       </main>
 
       <footer>
+        <div class="container flex">
+          <ul class="flex">
+            <li @click="console.log(i)" :class="(i != (footerLinks.length -1)) ? 'dot' : ''" v-for="(footerLink, i) in footerLinks"><a target="_blank" :href="footerLink.link">{{ footerLink.nome }}</a></li>
+          </ul>
+          <div class="right">
+            <img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAABGdBTUEAALGPC/xhBQAAAFpQTFRFAAAAc8b%2BeNj%2BeLL7lt3/YbL4cs/9rNn8p9b7%2Bfn5hdD/a8D/7vD/vOL9itf%2B////3PD%2Byuj9R6348Pb7KZz2UL78MKL3Oqv4Zsz/ndX8qN/%2BI5T0S7X4W8b9mmuivQAAAAF0Uk5TAEDm2GYAAACXSURBVBjTXYqLEsIwCARR%2B27zpCFNxP//TSGOTu3OhDs2wGaPM9bD8hKGMDtnDq130GkxDK/BY/tVc6CtXa21Q72ClFKoqUrINBLAzHP9grKpccxFYmqNIcY4j%2BXDiLJBztmUXCRkGgkgIsZbO1kwEjVDKwYmDriSGt6FPHrnp6x1Bd/vzxP9Bj8mFfBH2K8Gtng1AA95bxQhE7o%2B68UQAAAAAElFTkSuQmCC" alt="">
+            <select class="" name="">
+              <option value="">Italiano</option>
+            </select>
+          </div>
+
+        </div>
 
       </footer>
 

@@ -1,7 +1,12 @@
 header{
   @include ptb(1em, 0em);
   border-bottom: 1px solid $primary_color;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
   nav{
+
     .container-fluid{
       justify-content: space-between;
       align-items: center;
