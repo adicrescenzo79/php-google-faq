@@ -523,3 +523,10 @@ header .menu ul li.Domande {
   color: #3367D6;
   border-bottom: 3px solid #3367D6;
 }
+
+main {
+  max-width: 980px;
+}
+main h2 {
+  color: red;
+}
