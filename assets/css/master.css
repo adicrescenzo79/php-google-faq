@@ -533,6 +533,9 @@ main {
   padding-top: 11.5em;
   padding-bottom: 4em;
 }
+main a {
+  color: #3367d6;
+}
 main h2 {
   margin-top: 60px;
   font-size: 1.8em;

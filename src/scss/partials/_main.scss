@@ -1,5 +1,8 @@
 main{
   @include ptb(11.5em, 4em);
+  a{
+    color: #3367d6;
+  }
   h2{
     margin-top: 60px;
     font-size: 1.8em;
