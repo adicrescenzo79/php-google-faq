@@ -27,7 +27,7 @@
                 <span>Privacy e termini</span>
               </div>
               <div class="right flex">
-                <img src="" alt="">
+                <img src="https://www.svgrepo.com/show/42113/keyboard-buttons-or-visualization-button-of-nine-squares.svg" alt="">
                 <i class="fas fa-user-alt"></i>
               </div>
             </div>
